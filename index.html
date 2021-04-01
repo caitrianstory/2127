@@ -144,6 +144,7 @@ function moveBot(bot) {
 
   bot.x = bot.x + bot.dx;
   bot.y = bot.y - bot.dy;
+ 
   if (bot.y - bot.r < 0) {
     bot.dy = -bot.dy;
    // ughsnd.play();
@@ -221,7 +222,7 @@ function dokeydown(e) {
   }
 
   if (e.key == "ArrowDown") {
-    bots[0].dy = bots[0].dy + stepSize;
+    bots[0].dy = bots[0].dy - stepSize;
   }
   //Stop the Bot
   if (e.key == " ") {
